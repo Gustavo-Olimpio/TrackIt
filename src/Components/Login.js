@@ -4,10 +4,10 @@ import Txt from "./Txt"
 
 function Login(props){
     const array = [["email","senha"],["email","senha","nome","foto"]]
-    console.log(array[props.c])
+    const arrayvalores = ["email","password","name","image"]
     return(
         <Ontxt>
-       {array[props.c].map((e) => <Txt key={e} valor={e}/>)} 
+       {array[props.c].map((e,i) => <Txt key={e} i={i} titulo={arrayvalores} dados={props.dados} setDados={props.setDados} valor={e}/>)} 
         </Ontxt>
     )
 }

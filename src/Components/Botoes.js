@@ -1,11 +1,14 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom";
 
 function Botoes(props){
+    
+
     return(
         <>
         <Divbtn>
-            <Btn >Entrar </Btn>
-            <Pcadastro>{props.p}</Pcadastro>
+            <Btn onClick={props.funcao} >{props.txt}</Btn>
+            <Link to={props.link} ><Pcadastro>{props.p}</Pcadastro></Link>
         </Divbtn>
         </>
     )
