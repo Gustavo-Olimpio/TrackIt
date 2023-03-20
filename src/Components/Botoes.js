@@ -8,7 +8,7 @@ function Botoes(props){
     return(
         <>
         <Divbtn>
-            <Btn onClick={props.funcao} carregando={props.carregando}><div>{props.txt}</div>
+            <Btn data-test={props.datatest} onClick={props.funcao} carregando={props.carregando}><div>{props.txt}</div>
             <ThreeDots 
 height="60" 
 width="60" 
@@ -19,7 +19,7 @@ wrapperStyle={{}}
 wrapperClassName=""
 visible={props.carregando}
  /></Btn>
-            <Link to={props.link} ><Pcadastro>{props.p}</Pcadastro></Link>
+            <Link to={props.link} ><Pcadastro data-test={props.dtlink} >{props.p}</Pcadastro></Link>
             
         </Divbtn>
         </>

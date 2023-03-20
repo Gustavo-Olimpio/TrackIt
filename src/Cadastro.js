@@ -31,7 +31,7 @@ function Cadastro() {
       <>
       <Logo />
       <Login c={1} dados={dados} setDados={setDados}/>
-      <Botoes carregando={carregando} link={"/"} funcao={cadastro} p={"Já tem uma conta? Faça login!"} txt={"Cadastrar"}/>
+      <Botoes datatest={"signup-btn"} dtlink={"login-link"} carregando={carregando} link={"/"} funcao={cadastro} p={"Já tem uma conta? Faça login!"} txt={"Cadastrar"}/>
 
       </>
       

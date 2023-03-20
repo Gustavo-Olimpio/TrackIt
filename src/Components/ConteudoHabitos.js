@@ -60,24 +60,24 @@ function ConteudoHabitos(){
     console.log(allHabitos)
     return(
         <DivHabitos>
-            <TitBtn><h1>Meus Habitos</h1> <button onClick={clickMais}  >+</button></TitBtn>
-            <CriaHabito abre={abre}> 
+            <TitBtn><h1>Meus Habitos</h1> <button data-test="habit-create-btn" onClick={clickMais}  >+</button></TitBtn>
+            <CriaHabito data-test="habit-create-container" abre={abre}> 
                 <Botoes>
-                    <input placeholder="Nome do habito" value={habito.name} onChange={e => setHabito({...habito,name:e.target.value})}></input> 
+                    <input data-test="habit-name-input" placeholder="Nome do habito" value={habito.name} onChange={e => setHabito({...habito,name:e.target.value})}></input> 
                     <div>
-                        {array.map((e,i) => <Semana habito={habito} setHabito={setHabito}  key={i} i={i} dia={e}/>)}
+                        {array.map((e,i) => <Semana data-test="habit-day" habito={habito} setHabito={setHabito}  key={i} i={i} dia={e}/>)}
                     </div>
                 </Botoes>
                 <Botton>
-                    <p onClick={clickMais}>Cancelar</p>
-                    <Save onClick={enviar}>Salvar</Save>
+                    <p data-test="habit-create-cancel-btn" onClick={clickMais}>Cancelar</p>
+                    <Save data-test="habit-create-save-btn" onClick={enviar}>Salvar</Save>
                 </Botton>
             </CriaHabito>
            
             {(!tem) ? 
             <p>Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!</p>
             : 
-            allHabitos.map((e) => <ListaHabitos key={e.id} id={e.id} nome={e.name} dias={e.days} />)
+            allHabitos.map((e) => <ListaHabitos data-test="habit-container" key={e.id} id={e.id} nome={e.name} dias={e.days} />)
             }
             
             

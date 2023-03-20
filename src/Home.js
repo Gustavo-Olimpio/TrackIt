@@ -37,7 +37,7 @@ function Home(props) {
       <div>
         <Logo />
         <Login c={0} dados={dados} setDados={setDados}/>
-        <Botoes carregando={carregando} link={"/cadastro"} funcao={logar} p={"Não tem uma conta? Cadastre-se!"} txt={"Entrar"}/>
+        <Botoes datatest={"login-btn"} dtlink={"signup-link"} carregando={carregando} link={"/cadastro"} funcao={logar} p={"Não tem uma conta? Cadastre-se!"} txt={"Entrar"}/>
       </div>
     );
   }

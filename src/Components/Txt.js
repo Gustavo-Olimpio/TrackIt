@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
-function Txt({valor,i,setDados,dados,titulo}){
+function Txt({valor,i,setDados,dados,titulo,datatest}){
     const array = ["email","password","text","url"]
     
     return(
         <>
-        <Divtxt name={valor} key={i} type={array[i]} placeholder={valor} onChange={e => setDados({...dados,[titulo[i]] : e.target.value})} />
+        <Divtxt data-test={datatest[i]} name={valor} key={i} type={array[i]} placeholder={valor} onChange={e => setDados({...dados,[titulo[i]] : e.target.value})} />
         </>
     )
 }

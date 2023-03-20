@@ -9,10 +9,10 @@ function FooterMenu(){
   
      return(
          
-        <Divfooter>
-            <Link to="/habitos" ><p>Habitos</p></Link>
+        <Divfooter data-test="menu">
+            <Link to="/habitos" ><p data-test="habit-link">Habitos</p></Link>
             
-            <Link to="/hoje" > <Barra><CircularProgressbar value={percentage}
+            <Link to="/hoje" > <Barra><CircularProgressbar data-test="today-link" value={percentage}
             text="Hoje"
             background
             backgroundPadding={6}
@@ -26,7 +26,7 @@ function FooterMenu(){
             
             
             
-            <Link to="/historico" > <p>Historico</p> </Link>
+            <Link to="/historico" > <p data-test="history-link" >Historico</p> </Link>
         </Divfooter>
          
      )

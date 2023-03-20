@@ -7,7 +7,7 @@ function TopoMenu(){
  
     return(
        
-        <Topo>
+        <Topo data-test="header">
             <Logo src="/logo-simplificada.svg" />
             <Userimg src={image} />
 

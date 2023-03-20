@@ -19,10 +19,10 @@ function ListaHabitos(props){
     return(
         <MeusHabitos >
             <div>
-            <h1>{props.nome}</h1>
-            <img onClick={delet} src="/lixeira.png"/>
+            <h1 data-test="habit-name">{props.nome}</h1>
+            <img data-test="habit-delete-btn" onClick={delet} src="/lixeira.png"/>
             </div>
-            {array.map((e,i) => <Button i={i} dias={props.dias} disabled>{e}</Button>)}
+            {array.map((e,i) => <Button data-test="habit-day" i={i} dias={props.dias} disabled>{e}</Button>)}
         </MeusHabitos>
     )
 }
