@@ -29,7 +29,7 @@ function ConteudoHabitos(){
         }
     })
     request.catch(erro => {
-        console.log(erro.response.data.message)
+        alert(erro.response.data.message)
     } )
     }, []);
    
@@ -48,11 +48,11 @@ function ConteudoHabitos(){
             window.location.reload(true);
         })
         request.catch(erro => {
-            console.log(erro.response.data.message)
+            alert(erro.response.data.message)
         } )
         
     }
-    console.log(habito)
+   
     return(
         <DivHabitos>
             <TitBtn><h1>Meus Habitos</h1> <button data-test="habit-create-btn" onClick={clickMais}  >+</button></TitBtn>

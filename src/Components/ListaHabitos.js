@@ -4,7 +4,6 @@ import axios from "axios"
 function ListaHabitos(props){
     const array = ["D","S","T","Q","Q","S","S"]
     const token = localStorage.getItem("token")
-    console.log(props.dias)
     const config = {
         headers: {
             "Authorization":`Bearer ${token}`

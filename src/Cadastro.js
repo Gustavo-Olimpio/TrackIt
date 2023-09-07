@@ -9,7 +9,6 @@ function Cadastro() {
   const [carregando,setCarregando] = useState(false);
   const navigate = useNavigate();
   function cadastro(){
-    console.log(dados)
     setCarregando(true)
     setTimeout(testar,1000)
     

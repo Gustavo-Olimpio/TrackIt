@@ -3,6 +3,7 @@ import Calendar from "react-calendar";
 import { useState,useEffect } from "react";
 import axios from "axios";
 import "react-calendar/dist/Calendar.css"; // Importe o estilo CSS
+import dayjs from "dayjs";
 
 function ConteudoHistorico() {
   const [value, onChange] = useState(new Date());
@@ -18,30 +19,56 @@ function ConteudoHistorico() {
   useEffect(() => {
     const request = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits/history/daily",config)
 request.then(resposta => {
-    console.log(resposta.data)
     setHist(resposta.data)
-    for(let i=0; i < resposta.data.length ; i++){
-        for(let j=0; j < resposta.data[i].habits ; j++){
-            if(resposta.data[i].habits[j].done === false){
-                return setVerm([...verm,resposta.data[i].day])
-            }
+    let vermelhos = []
+    let verdes = []
+    for (let i = 0; i < resposta.data.length; i++) {
+      let encontrouHabitNaoFeito = false; // Inicialize a flag como false para cada dia
+    
+      for (let j = 0; j < resposta.data[i].habits.length; j++) {
+        if (resposta.data[i].habits[j].done === false) {
+          encontrouHabitNaoFeito = true;
+          break; // Saia do loop interno quando encontrar um hábito não feito
         }
-        setVerd([...verd,resposta.data[i].day])
+      }
+      if (encontrouHabitNaoFeito) {
+        vermelhos.push(resposta.data[i].day);
+      } else {
+        verdes.push(resposta.data[i].day);
+      }
     }
+    setVerm(vermelhos)
+    setVerd(verdes)
 })
 request.catch(erro => {
-    console.log(erro.response.data.message)
+    alert(erro.response.data.message)
 } )
-
 }, []);
 
   return (
     <DivHistorico>
-        {console.log( verd)}
-        {console.log( verm)}
         <h1>Historico</h1>
       <div>
-        <Calendar onChange={onChange} value={value} />
+      <CustomCalendar
+  onChange={onChange}
+  value={value}
+  tileContent={({ date }) => {
+    // Verifique se a data está na lista de datas verdes
+    const dataFormatada = dayjs(date).format('DD/MM/YYYY');
+    
+    if (verd.includes(dataFormatada)) {
+      return <div style={{ backgroundColor: 'green', color: 'white' }}></div>;
+    }
+    // Verifique se a data está na lista de datas vermelhas
+    else if (verm.includes(dataFormatada)) {
+      return <div style={{ backgroundColor: 'red', color: 'white' }}></div>;
+    }
+    // Se a data não estiver em nenhuma das listas, retorne nulo para não renderizar nada
+    else {
+      return null;
+    }
+  }}
+/>
       </div>
     </DivHistorico>
   );
@@ -67,10 +94,8 @@ div{
     height: 100%;
 }
 `;
+
 const CustomCalendar = styled(Calendar)`
   /* Estilos personalizados aqui */
-  background-color: #ffffff; /* Cor de fundo */
-  color: #333; /* Cor do texto */
-  border-radius: 5px; /* Borda arredondada */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  
 `;

@@ -20,7 +20,6 @@ function ConteudoHoje(props){
         const request = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits/today",config)
     request.then(resposta => {
         setHoje(resposta.data)
-        console.log(resposta.data)
         for(let i =0; i<resposta.data.length ; i++){
             if(resposta.data[i].done === true){
                 setClick([...click, resposta.data[i].id])
@@ -28,13 +27,12 @@ function ConteudoHoje(props){
         }
     })
     request.catch(erro => {
-        console.log(erro.response.data.message)
+        alert(erro.response.data.message)
     } )
 
     }, []);
     function mark(event, id) {
         event.preventDefault();
-        console.log(id);
         if (click.includes(id)) {
           // Se o id já estiver em click, remova-o
           const request = axios.post(`https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits/${id}/uncheck`,"",config)
@@ -55,7 +53,6 @@ function ConteudoHoje(props){
     } )
         }
       }
-    console.log(click)
     return(
         <DivHoje>
             <h1>{week}, {today}</h1>

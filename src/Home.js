@@ -11,10 +11,8 @@ function Home(props) {
   const [carregando,setCarregando] = useState(false);
   const navigate = useNavigate();
   function logar(){
-    console.log(dados)
     setCarregando(true)
     setTimeout(testar,1000)
-    
   }
   
   function testar(){
@@ -25,7 +23,6 @@ function Home(props) {
       localStorage.setItem("token",e.data.token );
       localStorage.setItem("img",e.data.image );
       props.setUsuario(e.data)
-      console.log(e.data)
     })
     post.catch(erro => {
       alert(erro.response.data.message)
