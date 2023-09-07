@@ -4,8 +4,9 @@ import 'react-circular-progressbar/dist/styles.css';
 import { Link } from "react-router-dom";
 
 
-function FooterMenu(){
-    const percentage = 66;
+function FooterMenu(props){
+    const percentage = (props.percent === NaN || !props.percent ? 0 : props.percent);
+    
   
      return(
          

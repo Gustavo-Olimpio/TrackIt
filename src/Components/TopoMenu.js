@@ -1,9 +1,9 @@
-import { useContext } from "react"
+
 import styled from "styled-components"
-import UserContext from "./UserContext"
+
 
 function TopoMenu(){
-   const {image} = useContext(UserContext)
+   const image = localStorage.getItem("img")
  
     return(
        

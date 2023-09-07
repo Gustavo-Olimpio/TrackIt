@@ -2,18 +2,14 @@ import axios from "axios"
 import styled from "styled-components"
 import Semana from "./Semana"
 import { useState,useEffect } from "react";
-import UserContext from "./UserContext"
-import { useContext } from "react"
 import ListaHabitos from "./ListaHabitos";
 
 function ConteudoHabitos(){
-
-    const {token} = useContext(UserContext)
+    const token = localStorage.getItem("token")
     const [abre,setAbre] = useState(false)
     const [habito,setHabito] = useState({name:"",days:[]})
     const [allHabitos,setAllHabitos] = useState([])
     const [tem,setTem] = useState()
-
     const array = ["D","S","T","Q","Q","S","S"]
    
     const config = {
@@ -25,8 +21,6 @@ function ConteudoHabitos(){
     useEffect(() => {
     const request = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits",config)
     request.then(resposta => {
-        
-        
         setAllHabitos(resposta.data)
         if (resposta.data.length > 0){
             setTem(true)
@@ -49,15 +43,16 @@ function ConteudoHabitos(){
     function enviar(){
         const request = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits",habito,config)
         request.then(resposta => {
-        
-            console.log(resposta)
+            alert("Habito criado com sucesso")
+            setHabito({name:"",days:[]})
+            window.location.reload(true);
         })
         request.catch(erro => {
             console.log(erro.response.data.message)
         } )
-        setHabito({name:"",days:[]})
+        
     }
-    console.log(allHabitos)
+    console.log(habito)
     return(
         <DivHabitos>
             <TitBtn><h1>Meus Habitos</h1> <button data-test="habit-create-btn" onClick={clickMais}  >+</button></TitBtn>
@@ -159,8 +154,6 @@ const CriaHabito = styled.div`
     display:${props => (props.abre) ? "flex":"none"};
     flex-direction:column;
     position: relative;
-    
-    
 `
 const Save = styled.button`
     width: 84px;

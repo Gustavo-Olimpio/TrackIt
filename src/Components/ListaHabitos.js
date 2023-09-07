@@ -1,12 +1,9 @@
 import styled from "styled-components"
 import axios from "axios"
-import UserContext from "./UserContext"
-import { useContext } from "react"
-
 
 function ListaHabitos(props){
     const array = ["D","S","T","Q","Q","S","S"]
-    const {token} = useContext(UserContext)
+    const token = localStorage.getItem("token")
     console.log(props.dias)
     const config = {
         headers: {
@@ -14,7 +11,14 @@ function ListaHabitos(props){
         }
     }
     function delet(){
-        const resquest = axios.delete(`https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits/${props.id}`,config)
+        const request = axios.delete(`https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits/${props.id}`,config)
+        request.then(resposta => {
+            alert("Habito Deletado")
+            window.location.reload(true);
+        })
+        request.catch(erro => {
+            alert(erro.response.data.message)
+        })
     }
     return(
         <MeusHabitos >
@@ -37,13 +41,13 @@ padding:14px;
 margin-bottom:10px;
 h1{
     font-weight: 400;
-font-size: 19.976px;
-color: #666666;
+    font-size: 19.976px;
+    color: #666666;
 }
 
 img{
-    width:20px;
-    height:20px;
+    width:13px;
+    height:15px;
 }
 div{
     display:flex;
@@ -54,10 +58,11 @@ div{
 `
 
 const Button = styled.button` 
-font-size: 19.976px;
+    font-size: 19.976px;
     width:30px;
     height:30px;
     margin-right:4px;
+    border:1px solid #CFCFCF;
     background-color: ${props => !(props.dias.includes(props.i)) ? "#FFFFFF": "#CFCFCF"};
     color: ${props => !(props.dias.includes(props.i)) ? "#CFCFCF": "#FFFFFF"};
 `

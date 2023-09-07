@@ -4,25 +4,21 @@ import GlobalStyle from "./Components/GlobalStyle";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Hoje from "./Hoje";
 import Habitos from "./Habitos";
-import { useState } from "react";
-
-import UserContext from "./Components/UserContext";
+import Historico from "./Historico";
 
 function App() {
-  const [usuario,setUsuario] = useState([]);
+ 
   return (
     <BrowserRouter>
-      <UserContext.Provider value={usuario}>
       <GlobalStyle />
       <Routes>
-        <Route path="/" element={<Home setUsuario={setUsuario}/>} />
+        <Route path="/" element={<Home/>} />
         <Route path="/cadastro" element={<Cadastro />} />
-        
           <Route path="/hoje" element={<Hoje />} />
           <Route path="/habitos" element={<Habitos />} />
+          <Route path="/historico" element={<Historico />} />
         
       </Routes>
-      </UserContext.Provider>
     </BrowserRouter>
   );
 }

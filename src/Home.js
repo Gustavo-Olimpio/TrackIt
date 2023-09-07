@@ -22,7 +22,8 @@ function Home(props) {
     post.then((e) => {
       setCarregando(false)
       navigate("/hoje");
-      
+      localStorage.setItem("token",e.data.token );
+      localStorage.setItem("img",e.data.image );
       props.setUsuario(e.data)
       console.log(e.data)
     })

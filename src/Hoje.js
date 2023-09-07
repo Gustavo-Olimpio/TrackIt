@@ -1,16 +1,16 @@
 import TopoMenu from "./Components/TopoMenu"
 import FooterMenu from "./Components/FooterMenu"
 import ConteudoHoje from "./Components/ConteudoHoje"
-
+import { useState } from "react"
 
 function Hoje(){
-  
+    const [percent,setPercent] = useState()
  
     return(
         <div>
        <TopoMenu />
-       <ConteudoHoje/>
-       <FooterMenu />
+       <ConteudoHoje setPercent={setPercent}/>
+       <FooterMenu percent = {percent}/>
         </div>
     )
 }

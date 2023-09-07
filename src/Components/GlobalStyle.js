@@ -51,7 +51,7 @@ table {
 
     body{
         font-family: 'Lexend Deca', sans-serif;
-		
+		background-color:#F2F2F2;
     }
 	* {
   		box-sizing: border-box;
