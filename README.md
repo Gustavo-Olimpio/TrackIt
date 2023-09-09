@@ -81,17 +81,17 @@ Para rodar este projeto em sua máquina local, siga estas etapas:
    ```bash
    git clone https://github.com/Gustavo-Olimpio/TrackIt.git
 
-Navegue até o diretório do projeto:
+2. Navegue até o diretório do projeto:
 
  ```bash
 cd seu-projeto
 ```
-Instale as dependências do projeto usando npm:
+3. Instale as dependências do projeto usando npm:
 
  ```bash
 npm install
 ```
-Após a instalação das dependências, você pode iniciar o servidor local com o seguinte comando:
+4. Após a instalação das dependências, você pode iniciar o servidor local com o seguinte comando:
 
  ```bash
 npm start
