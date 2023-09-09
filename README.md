@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# TrackIt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Projeto em Ação](link-para-imagem-ou-gif.gif)
 
-## Available Scripts
+## Descrição
+O TrackIt é um projeto projetado para ajudá-lo a entender e melhorar seus hábitos. Ele permite que você salve e monitore suas atividades diárias, fornecendo informações valiosas para que você possa ter maior controle sobre seus comportamentos e metas pessoais.
 
-In the project directory, you can run:
+![link]()
 
-### `npm start`
+## Sobre
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Visão Geral
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O **TrackIt** é uma plataforma projetada para auxiliá-lo a compreender e aprimorar seus hábitos diários. Esta aplicação permite que você registre e acompanhe suas atividades cotidianas, oferecendo insights valiosos para que você possa alcançar um maior controle sobre seus comportamentos e metas pessoais.
 
-### `npm test`
+**Principais Características:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Registro de Atividades:** Registre suas atividades diárias de forma fácil e intuitiva.
 
-### `npm run build`
+- **Acompanhamento de Progresso:** Visualize seu progresso ao longo do tempo com calendário e estatísticas detalhadas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Metas e Objetivos:** Defina metas personalizadas e utilize o sistema de notificações para ajudá-lo a alcançá-las.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Hábitos Saudáveis:** Identifique padrões em seus hábitos e tome decisões informadas para melhorar sua qualidade de vida.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Privacidade e Segurança:** Seus dados são armazenados com segurança e sua privacidade é uma prioridade.
 
-### `npm run eject`
+O TrackIt é a ferramenta ideal para quem busca aprimorar sua rotina, criar hábitos saudáveis e alcançar metas pessoais. Comece hoje mesmo e transforme seu dia a dia com um melhor entendimento de si mesmo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Motivação
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+O **TrackIt** nasceu da crença de que a tecnologia pode ser uma aliada poderosa na busca por hábitos de vida mais saudáveis. Em um mundo cada vez mais acelerado, onde até as escolhas mais simples, como alimentação, podem se tornar desafios, é vital ter uma ferramenta que facilite a adoção de hábitos saudáveis.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+A crescente prevalência de fast foods e estilos de vida sedentários destacam a importância de um aplicativo que ajude as pessoas a manterem o controle sobre sua saúde e bem-estar. O **TrackIt** não apenas registra e alerta sobre atividades diárias, mas também capacita os usuários a compreenderem melhor seus padrões de comportamento, auxiliando-os na tomada de decisões informadas.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O objetivo principal é simples: ajudar o maior número possível de pessoas a melhorar sua qualidade de vida. O **TrackIt** reflete a missão de fornecer uma solução acessível e eficaz para aprimorar a rotina e criar hábitos mais saudáveis. Junte-se a nós nessa jornada e comece a transformar sua vida hoje mesmo.
 
-## Learn More
+### Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Cadastro e Login Seguro:** Utilize um sistema de cadastro e login com autenticação por token para garantir a segurança dos seus dados pessoais.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Gestão de Hábitos:** Registre seus hábitos personalizados, incluindo nome e dias da semana em que deseja praticá-los.
 
-### Code Splitting
+- **Acompanhamento Diário:** Acesse uma tela intuitiva que exibe o dia atual e lista os hábitos que você planejou para o dia. Marque-os como concluídos ou não, acompanhando seu progresso diário.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Calendário de Histórico:** Visualize seu histórico de hábitos em um calendário interativo. Veja quais hábitos você concluiu em cada dia, permitindo uma análise detalhada de seu desempenho ao longo do tempo.
 
-### Analyzing the Bundle Size
+- **Compartilhamento e Motivação:** Compartilhe seus sucessos e desafios com sua comunidade e amigos, mantendo-se motivado na jornada de melhoria de hábitos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Personalização Total:** Adapte o aplicativo de acordo com suas preferências e objetivos pessoais, tornando sua experiência única.
 
-### Making a Progressive Web App
+### Próximos Passos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Histórico Detalhado:** Implementar uma funcionalidade na tela de histórico que permite ao usuário ver os hábitos que não foram concluídos em um dia específico ao clicar sobre ele. Isso fornecerá insights detalhados sobre os desafios e oportunidades de melhoria.
 
-### Advanced Configuration
+- **Gráfico de Desempenho:** Adicionar um gráfico visual que exiba o desempenho do usuário em relação aos hábitos concluídos e não concluídos ao longo do tempo. Esse recurso ajudará os usuários a rastrear seu progresso de maneira mais eficaz e motivadora.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Notificações e Lembretes:** Implementar um sistema de notificações ou lembretes para incentivar os usuários a praticarem seus hábitos conforme planejado, tornando o aplicativo ainda mais prático e útil.
 
-### Deployment
+- **Gamificação:** Introduzir elementos de gamificação, como recompensas e desafios, para tornar a experiência de melhorar hábitos mais envolvente e divertida.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Integração de Redes Sociais:** Permitir que os usuários compartilhem seus sucessos e desafios nas redes sociais, promovendo uma comunidade envolvente de apoio e motivação.
 
-### `npm run build` fails to minify
+- **Feedback dos Usuários:** Continuar coletando feedback dos usuários e aprimorando o aplicativo com base em suas necessidades e sugestões.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Tecnologias
+<p>
+<img src="https://img.shields.io/badge/-Javascript-F7DF1E?logo=javascript&logoColor=white"  alt="JavaScript" width="100" height="30">
+<img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white" width="80" height="30">
+<img src="https://img.shields.io/badge/-Axios-5A29E4?logo=axios&logoColor=white" width="80" height="30">
+<img src="https://img.shields.io/badge/-StyledComponent-DB7093?logo=styledcomponents&logoColor=white" width="120" height="30">
+<img src="https://img.shields.io/badge/-.ENV-000000?logo=dotenv&logoColor=white" width="80" height="30">
+</p>
+
+## Como Rodar
+
+Para rodar este projeto em sua máquina local, siga estas etapas:
+
+1. Clone o repositório para o seu ambiente de desenvolvimento:
+
+   ```bash
+   git clone https://github.com/Gustavo-Olimpio/TrackIt.git
+Navegue até o diretório do projeto:
+
+bash
+Copy code
+cd seu-projeto
+Instale as dependências do projeto usando npm:
+
+bash
+Copy code
+npm install
+Após a instalação das dependências, você pode iniciar o servidor local com o seguinte comando:
+
+bash
+Copy code
+npm start
+O aplicativo estará disponível em http://localhost:3000. Você pode acessá-lo no seu navegador.
+
+Certifique-se de que todas as dependências são instaladas corretamente e o servidor local é iniciado sem erros. Agora você pode explorar e usar o projeto em sua máquina local.
