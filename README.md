@@ -80,7 +80,7 @@ Para rodar este projeto em sua máquina local, siga estas etapas:
 
    ```bash
    git clone https://github.com/Gustavo-Olimpio/TrackIt.git
-```
+
 Navegue até o diretório do projeto:
 
  ```bash
