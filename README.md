@@ -79,7 +79,7 @@ Para rodar este projeto em sua máquina local, siga estas etapas:
 1. Clone o repositório para o seu ambiente de desenvolvimento:
 
    ```bash
-   git clone https://github.com/Gustavo-Olimpio/TrackIt.git
+   git clone https://github.com/seu-usuario/TrackIt.git
 
 2. Navegue até o diretório do projeto:
 
