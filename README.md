@@ -7,7 +7,7 @@ O TrackIt é um projeto projetado para ajudá-lo a entender e melhorar seus háb
 
 [TrackIt](https://track-it-five-theta.vercel.app/)
 
-![GIF Animado](https://drive.google.com/uc?export=view&id=1vM_KqdBxOJeso88_NkFHjWQ_GO19khOE)
+![Meu GIF Animado](https://drive.google.com/uc?export=view&id=1vM_KqdBxOJeso88_NkFHjWQ_GO19khOE)
 
 ## Sobre
 
