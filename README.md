@@ -5,7 +5,7 @@
 ## Descrição
 O TrackIt é um projeto projetado para ajudá-lo a entender e melhorar seus hábitos. Ele permite que você salve e monitore suas atividades diárias, fornecendo informações valiosas para que você possa ter maior controle sobre seus comportamentos e metas pessoais.
 
-[TrackIt](https://track-it-five-theta.vercel.app/)
+[Link para o TrackIt](https://track-it-five-theta.vercel.app/)
 
 ![Meu GIF Animado](https://drive.google.com/uc?export=view&id=1vM_KqdBxOJeso88_NkFHjWQ_GO19khOE)
 
